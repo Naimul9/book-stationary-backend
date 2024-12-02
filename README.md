@@ -20,7 +20,6 @@
 
 <a name="learning-now"></a>
 
-
 <img src="https://img.shields.io/badge/TypeScript-282C34?logo=typescript&logoColor=F7DF1E" alt="TypescripScript logo" title="JavaScript" height="25" />
 &nbsp;
 <img src="https://img.shields.io/badge/Mongoose-282C34?logo=mongoose&logoColor=47A248" alt="MongoDB logo" title="Mongoose" height="25" />
@@ -32,6 +31,7 @@
 <img src="https://img.shields.io/badge/Express-282C34?logo=express&logoColor=FFFFFF" alt="Express.js logo" title="Express.js" height="25" />
 
 <a name="learning-next"></a>
+
 
 ## Steps To Run in Local
 - First clone the repo in your local computer using git clone or download the zip file.
