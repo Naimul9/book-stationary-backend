@@ -1,6 +1,6 @@
 # BookStationary
 
-**BookStationary is a backend server which made with typescript and mongoose where can do all the crud functionality and many other things like odering and calculating the revenue. **
+**BookStationary is a backend server which made with typescript and mongoose where can do all the crud functionality and many other things like odering and calculating the revenue.**
 
 ## Important Links
 
