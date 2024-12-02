@@ -11,7 +11,11 @@ const createOrder = async (payload: IOrder) => {
   }
 
   if (foundProduct.quantity < quantity) {
-    throw new Error('Insufficient stock');
+    // throw new Error('Insufficient stock');
+    return {
+      status: false,
+      message: 'Insufficient stock',
+    };
   }
 
   const totalPrice = foundProduct.price * quantity;

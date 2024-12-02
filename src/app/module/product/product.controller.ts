@@ -17,7 +17,6 @@ const createProduct = async (req: Request, res: Response) => {
     res.json({
       message: 'Validation Failed',
       status: false,
-
       error,
     });
   }
@@ -25,7 +24,7 @@ const createProduct = async (req: Request, res: Response) => {
 
 const getProduct = async (req: Request, res: Response) => {
   try {
-    const result = await productService.getProduct();
+    const result = await productService.getProduct(req.query);
 
     res.json({
       status: true,

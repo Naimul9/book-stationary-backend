@@ -1,4 +1,4 @@
-import { IProduct } from './product.interface';
+import { IProduct, SearchTerm } from './product.interface';
 import Product from './product.model';
 
 const createProduct = async (payload: IProduct): Promise<IProduct> => {
@@ -6,8 +6,19 @@ const createProduct = async (payload: IProduct): Promise<IProduct> => {
   return result;
 };
 
-const getProduct = async () => {
-  const result = await Product.find();
+const getProduct = async (searchTerm: SearchTerm) => {
+  const { brand, category } = searchTerm;
+  const query: Record<string, any> = {};
+
+  if (brand) {
+    query.brand = { $regex: brand, $options: 'i' };
+  }
+
+  if (category) {
+    query.category = { $regex: category, $options: 'i' };
+  }
+
+  const result = await Product.find(query);
   return result;
 };
 

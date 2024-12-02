@@ -1,20 +1,22 @@
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { orderService } from './order.service';
 
-const createOrder = async (req: Request, res: Response) => {
+const createOrder = async (req: Request, res: Response, next: NextFunction) => {
   try {
     const order = await orderService.createOrder(req.body);
+
     res.status(201).json({
       message: 'Order created successfully',
       status: true,
       data: order,
     });
   } catch (error) {
-    res.status(400).json({
-      message: 'Order creation failed',
-      status: false,
-      error,
-    });
+    // res.status(400).json({
+    //   message: 'Order creation failed',
+    //   status: false,
+    //   error,
+    // });
+    return next(error);
   }
 };
 

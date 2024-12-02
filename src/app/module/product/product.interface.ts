@@ -7,3 +7,8 @@ export interface IProduct {
   quantity: number;
   inStock: boolean;
 }
+
+export interface SearchTerm {
+  brand?: string | number | null;
+  category?: string | number | null;
+}
