@@ -8,13 +8,9 @@
 
 ## Features 
 
-- **User:** Three different role of user can differently use this website. The roles are donor, admin & volunteer 
-- **Donation Requests:** Here you can see all the pending donation requests and every user can respond to the requests.
-- **Funding:** Here anyone can contribute to us to grow up our campaign.
-- **Dashboard:** There are three different types of dashboard for the three different roled user.
-- **Profile:** Here a user can see his/her info and can update some of them which allowed by the Website.
-- **Search Donor:** A user can search donor by giving the exact location and blood group. 
-- **Responsive Design:** Enjoy a seamless experience across various devices, including desktops, tablets, and smartphones.
+- **ProductQuery:** Here you can use filter in the get api as query to find speicic data 
+- **AutoModification:** The product data quantity will automatically updated after ordering the product.
+- **Validation:** Used custom validation for all the input field.
 
 # Used Technologies
 
@@ -35,4 +31,4 @@
 ## Steps To Run in Local
 - First clone the repo in your local computer using git clone or download the zip file.
 - Then install all the dependencies using **npm i**.
-- Then set the firebase and mongodb credentials to run the project.
+- Then set the mongodb credentials and Port to run the project.
