@@ -7,6 +7,7 @@ const createProduct = async (payload: IProduct): Promise<IProduct> => {
 };
 
 const getProduct = async (searchTerm: SearchTerm) => {
+  // query for getting specific item
   const { brand, category } = searchTerm;
   const query: Record<string, any> = {};
 

@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import mongoose from 'mongoose';
 import { productService } from './product.service';
 
+// for creating product
 const createProduct = async (req: Request, res: Response) => {
   try {
     const payload = req.body;
@@ -22,6 +23,7 @@ const createProduct = async (req: Request, res: Response) => {
   }
 };
 
+// for getting products
 const getProduct = async (req: Request, res: Response) => {
   try {
     const result = await productService.getProduct(req.query);
@@ -40,7 +42,7 @@ const getProduct = async (req: Request, res: Response) => {
     });
   }
 };
-
+// for getting Single products
 const getSingleProduct = async (req: Request, res: Response) => {
   try {
     const productId = req.params.productId;
@@ -58,7 +60,7 @@ const getSingleProduct = async (req: Request, res: Response) => {
     });
   }
 };
-
+// for updating products
 const updateProduct = async (req: Request, res: Response) => {
   try {
     const productId = req.params.productId;
@@ -77,7 +79,7 @@ const updateProduct = async (req: Request, res: Response) => {
     });
   }
 };
-
+// for deleting products
 const deleteProduct = async (req: Request, res: Response) => {
   try {
     const productId = req.params.productId;
